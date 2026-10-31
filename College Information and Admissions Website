@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ABC College Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #102c57;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #ffc857;
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(
+                120deg, #102c57, #2878a5
+            );
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .banner h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #ffc857;
+            color: #102c57;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #102c57;
+            margin-bottom: 25px;
+        }
+
+        /* Cards */
+        .container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px
+                        rgba(0,0,0,0.10);
+        }
+
+        .card h3 {
+            color: #2878a5;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Admissions */
+        #admissions {
+            background: #e7eff8;
+        }
+
+        /* Contact */
+        #contact {
+            background: #102c57;
+            color: white;
+        }
+
+        #contact h2 {
+            color: white;
+        }
+
+        footer {
+            background: #071a35;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Mobile Responsive */
+        @media(max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <h2>ABC College</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Home Banner -->
+<header class="banner" id="home">
+    <h1>Welcome to ABC College</h1>
+    <p>Learn Today, Lead Tomorrow</p>
+    <p>Building Knowledge, Skills and Innovation</p>
+    <a href="#admissions" class="btn">
+        Apply for Admission
+    </a>
+</header>
+
+<!-- About -->
+<section id="about">
+    <h2>About Our College</h2>
+    <p>
+        ABC College is committed to providing quality
+        education, practical knowledge and excellent
+        learning opportunities for students.
+        Our mission is to develop skilled and
+        responsible future professionals.
+    </p>
+</section>
+
+<!-- Departments -->
+<section id="departments">
+    <h2>Our Departments</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>Computer Science</h3>
+            <p>Programming, AI and Software Development.</p>
+        </div>
+
+        <div class="card">
+            <h3>Biotechnology</h3>
+            <p>Genetics, Microbiology and Bioinformatics.</p>
+        </div>
+
+        <div class="card">
+            <h3>Electronics</h3>
+            <p>Electronics, Circuits and Communication.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mechanical</h3>
+            <p>Design, Manufacturing and Engineering.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Courses -->
+<section id="courses">
+    <h2>Courses Offered</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>B.Tech</h3>
+            <p>Four-year undergraduate engineering program.</p>
+        </div>
+
+        <div class="card">
+            <h3>B.Sc</h3>
+            <p>Science and technology degree programs.</p>
+        </div>
+
+        <div class="card">
+            <h3>MBA</h3>
+            <p>Management and business administration.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Faculty -->
+<section id="faculty">
+    <h2>Our Faculty</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>Dr. Arun Kumar</h3>
+            <p>Professor - Computer Science</p>
+        </div>
+
+        <div class="card">
+            <h3>Dr. Priya Sharma</h3>
+            <p>Professor - Biotechnology</p>
+        </div>
+
+        <div class="card">
+            <h3>Mr. Rahul Verma</h3>
+            <p>Assistant Professor - Electronics</p>
+        </div>
+    </div>
+</section>
+
+<!-- Admissions -->
+<section id="admissions">
+    <h2>Admission Procedure</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>Step 1</h3>
+            <p>Check course eligibility criteria.</p>
+        </div>
+
+        <div class="card">
+            <h3>Step 2</h3>
+            <p>Fill out the application form.</p>
+        </div>
+
+        <div class="card">
+            <h3>Step 3</h3>
+            <p>Submit required documents.</p>
+        </div>
+
+        <div class="card">
+            <h3>Step 4</h3>
+            <p>Complete admission and fee payment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities -->
+<section id="facilities">
+    <h2>Campus Facilities</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>📚 Library</h3>
+            <p>Well-equipped library with learning resources.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Computer Labs</h3>
+            <p>Modern computer laboratories.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏏 Sports</h3>
+            <p>Indoor and outdoor sports facilities.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏠 Hostel</h3>
+            <p>Comfortable student accommodation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Events -->
+<section id="events">
+    <h2>College Events</h2>
+
+    <div class="container">
+        <div class="card">
+            <h3>Technical Fest</h3>
+            <p>Technical competitions and project exhibitions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Annual Day</h3>
+            <p>Cultural programs and student celebrations.</p>
+        </div>
+
+        <div class="card">
+            <h3>Workshop</h3>
+            <p>Skill development and practical training.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>Address: ABC College, Andhra Pradesh, India</p>
+    <p>Email: info@abccollege.edu</p>
+    <p>Phone: +91 9876543210</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 ABC College. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
