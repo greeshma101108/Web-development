@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Fest 2026</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f5fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #17133d;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    color: #ffcf5c;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ffcf5c;
+}
+
+.banner {
+    min-height: 330px;
+    padding: 65px 8%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #26105b, #8d278c, #ed6a55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: 44px;
+    margin-bottom: 12px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.banner button, .register-btn {
+    background: #ffcf5c;
+    color: #17133d;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+section {
+    padding: 45px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #26105b;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    padding: 9px 17px;
+    margin: 5px;
+    border: 1px solid #6544a3;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #6544a3;
+    color: white;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 12px #00000012;
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    color: #6b3296;
+    margin-bottom: 8px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eee5ff;
+    color: #552b8c;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.schedule {
+    background: #eeeafa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 13px;
+    text-align: left;
+}
+
+th {
+    background: #30205e;
+    color: white;
+}
+
+.coordinator-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.coordinator {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.rules {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.rules li {
+    margin: 10px 0 10px 22px;
+}
+
+.registration {
+    background: #eeeafa;
+}
+
+form {
+    background: white;
+    max-width: 550px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    background: #30205e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+footer {
+    background: #17133d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>FEST 2026</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#coordinators">Coordinators</a>
+        <a href="#register">Register</a>
+    </nav>
+</header>
+
+<div class="banner" id="home">
+    <h1>WELCOME TO FEST 2026!</h1>
+    <p>Celebrate Talent, Creativity and Innovation</p>
+    <p>October 15 - 16 | College Campus</p>
+    <button onclick="location.href='#register'">
+        Register Now
+    </button>
+</div>
+
+<section id="events">
+    <h2 class="section-title">Explore Our Events</h2>
+
+    <div class="filters">
+        <button onclick="filterEvents('All')">All</button>
+        <button onclick="filterEvents('Technical')">Technical</button>
+        <button onclick="filterEvents('Cultural')">Cultural</button>
+        <button onclick="filterEvents('Workshop')">Workshops</button>
+    </div>
+
+    <div class="event-container">
+
+        <div class="event-card" data-category="Technical">
+            <span class="tag">Technical</span>
+            <h3>Code Challenge</h3>
+            <p>Test your programming and problem-solving skills.</p>
+            <p><b>Time:</b> 10:00 AM</p>
+        </div>
+
+        <div class="event-card" data-category="Technical">
+            <span class="tag">Technical</span>
+            <h3>Project Expo</h3>
+            <p>Present your innovative projects and ideas.</p>
+            <p><b>Time:</b> 11:30 AM</p>
+        </div>
+
+        <div class="event-card" data-category="Cultural">
+            <span class="tag">Cultural</span>
+            <h3>Dance Competition</h3>
+            <p>Showcase your dance talent on stage.</p>
+            <p><b>Time:</b> 1:00 PM</p>
+        </div>
+
+        <div class="event-card" data-category="Cultural">
+            <span class="tag">Cultural</span>
+            <h3>Singing Competition</h3>
+            <p>Share your musical talent with everyone.</p>
+            <p><b>Time:</b> 2:00 PM</p>
+        </div>
+
+        <div class="event-card" data-category="Workshop">
+            <span class="tag">Workshop</span>
+            <h3>AI and Robotics</h3>
+            <p>Learn about artificial intelligence and robotics.</p>
+            <p><b>Time:</b> 10:30 AM</p>
+        </div>
+
+        <div class="event-card" data-category="Workshop">
+            <span class="tag">Workshop</span>
+            <h3>Web Development</h3>
+            <p>Explore the basics of modern website development.</p>
+            <p><b>Time:</b> 12:00 PM</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="schedule" id="schedule">
+    <h2 class="section-title">Event Schedule</h2>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Venue</th>
+        </tr>
+        <tr>
+            <td>9:00 AM</td>
+            <td>Inauguration</td>
+            <td>Main Auditorium</td>
+        </tr>
+        <tr>
+            <td>10:00 AM</td>
+            <td>Code Challenge</td>
+            <td>Computer Lab</td>
+        </tr>
+        <tr>
+            <td>11:30 AM</td>
+            <td>Project Expo</td>
+            <td>Seminar Hall</td>
+        </tr>
+        <tr>
+            <td>1:00 PM</td>
+            <td>Dance Competition</td>
+            <td>Main Stage</td>
+        </tr>
+        <tr>
+            <td>2:00 PM</td>
+            <td>Singing Competition</td>
+            <td>Main Stage</td>
+        </tr>
+    </table>
+</section>
+
+<section id="coordinators">
+    <h2 class="section-title">Event Coordinators</h2>
+
+    <div class="coordinator-container">
+        <div class="coordinator">
+            <h3>Technical Events</h3>
+            <p>Coordinator: Rahul</p>
+            <p>Email: technical@college.edu</p>
+        </div>
+
+        <div class="coordinator">
+            <h3>Cultural Events</h3>
+            <p>Coordinator: Priya</p>
+            <p>Email: cultural@college.edu</p>
+        </div>
+
+        <div class="coordinator">
+            <h3>Workshops</h3>
+            <p>Coordinator: Arjun</p>
+            <p>Email: workshops@college.edu</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Festival Rules</h2>
+
+    <div class="rules">
+        <ol>
+            <li>Students must carry their college ID cards.</li>
+            <li>Participants must register before the deadline.</li>
+            <li>Students should report to the venue on time.</li>
+            <li>Maintain discipline throughout the festival.</li>
+            <li>Follow the instructions given by coordinators.</li>
+            <li>Respect other participants and their performances.</li>
+        </ol>
+    </div>
+</section>
+
+<section class="registration" id="register">
+    <h2 class="section-title">Student Registration Form</h2>
+
+    <form id="registrationForm">
+        <label>Student Name</label>
+        <input type="text" id="studentName"
+               placeholder="Enter your name" required>
+
+        <label>College Email</label>
+        <input type="email" id="email"
+               placeholder="Enter your email" required>
+
+        <label>Department</label>
+        <input type="text" id="department"
+               placeholder="Enter your department" required>
+
+        <label>Select Event</label>
+        <select id="eventName" required>
+            <option value="">Choose an event</option>
+            <option>Code Challenge</option>
+            <option>Project Expo</option>
+            <option>Dance Competition</option>
+            <option>Singing Competition</option>
+            <option>AI and Robotics</option>
+            <option>Web Development</option>
+        </select>
+
+        <button type="submit">Submit Registration</button>
+
+        <p id="message"></p>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 College Fest | All Rights Reserved</p>
+    <p>Celebrate. Participate. Create Memories.</p>
+</footer>
+
+<script>
+function filterEvents(category) {
+    const cards = document.querySelectorAll(".event-card");
+
+    cards.forEach(card => {
+        if (category === "All" ||
+            card.dataset.category === category) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("studentName").value;
+    const eventName = document.getElementById("eventName").value;
+
+    document.getElementById("message").textContent =
+        "Thank you, " + name +
+        "! Your registration for " + eventName +
+        " has been submitted successfully.";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
