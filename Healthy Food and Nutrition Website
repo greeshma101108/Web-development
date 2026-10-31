@@ -1,12 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>Healthy Food and Nutrition</title>
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-
-    <title>Healthy Food and Nutrition</title>
 
     <style>
         * {
@@ -14,17 +13,16 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
-            background: #f5fff5;
+            background-color: #f4fff4;
             color: #333;
         }
 
-        /* Navigation */
+        /* Navigation Bar */
         nav {
-            background: #226b3b;
+            background: #176b3a;
             padding: 18px;
             display: flex;
             justify-content: space-between;
@@ -39,31 +37,27 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 18px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
-        nav ul li a {
+        nav a {
             color: white;
             text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            color: #ffe082;
         }
 
         /* Banner */
         .banner {
             background: linear-gradient(
-                120deg, #226b3b, #78b96e
+                to right, #176b3a, #78bd78
             );
-            color: white;
             text-align: center;
-            padding: 100px 20px;
+            color: white;
+            padding: 80px 20px;
         }
 
         .banner h1 {
-            font-size: 42px;
+            font-size: 40px;
             margin-bottom: 15px;
         }
 
@@ -73,23 +67,22 @@
 
         .btn {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #ffe082;
-            color: #225b32;
+            background: #ffdf80;
+            color: #176b3a;
+            padding: 12px 22px;
+            margin-top: 20px;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold;
         }
 
         /* Sections */
         section {
-            padding: 55px 8%;
+            padding: 45px 7%;
             text-align: center;
         }
 
         section h2 {
-            color: #226b3b;
+            color: #176b3a;
             margin-bottom: 25px;
         }
 
@@ -98,42 +91,60 @@
             display: grid;
             grid-template-columns:
                 repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
+            gap: 20px;
         }
 
         .card {
             background: white;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px
-                rgba(0,0,0,0.10);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px
+                rgba(0,0,0,0.1);
         }
 
         .card h3 {
-            color: #32834a;
-            margin-bottom: 12px;
+            color: #23864b;
+            margin: 12px 0;
+        }
+
+        .emoji {
+            font-size: 40px;
         }
 
         .card p {
             line-height: 1.6;
         }
 
-        .emoji {
-            font-size: 40px;
-            margin-bottom: 12px;
+        /* Recipe Buttons */
+        button {
+            background: #176b3a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        button:hover {
+            background: #23864b;
+        }
+
+        .ingredients {
+            display: none;
+            margin-top: 15px;
+            background: #e5f5e7;
+            padding: 12px;
+            text-align: left;
+            border-radius: 5px;
         }
 
         #meal {
-            background: #e8f5e9;
+            background: #e5f5e7;
         }
 
         #contact {
-            background: #226b3b;
+            background: #176b3a;
             color: white;
         }
 
@@ -142,13 +153,13 @@
         }
 
         footer {
-            background: #164b2b;
+            background: #104c29;
             color: white;
             text-align: center;
             padding: 18px;
         }
 
-        /* Responsive Design */
+        /* Mobile Design */
         @media(max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -160,11 +171,7 @@
             }
 
             .banner h1 {
-                font-size: 30px;
-            }
-
-            section {
-                padding: 40px 5%;
+                font-size: 28px;
             }
         }
     </style>
@@ -172,86 +179,55 @@
 
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navigation -->
 <nav>
     <h2>Healthy Life</h2>
 
     <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#foods">Healthy Foods</a></li>
+        <li><a href="#categories">Categories</a></li>
         <li><a href="#recipes">Recipes</a></li>
-        <li><a href="#meal">Meal Plan</a></li>
+        <li><a href="#meal">Meal Plans</a></li>
         <li><a href="#tips">Tips</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- Homepage Banner -->
+<!-- Home Banner -->
 <header class="banner" id="home">
-    <h1>Eat Healthy, Live Healthy!</h1>
-    <p>Discover the Power of Healthy Food and Nutrition</p>
-    <p>Good Food, Good Health, Good Life.</p>
-
-    <a href="#foods" class="btn">
-        Explore Healthy Foods
-    </a>
+    <h1>Healthy Food and Nutrition</h1>
+    <p>Eat Healthy, Stay Healthy and Live Better!</p>
+    <a href="#recipes" class="btn">Explore Recipes</a>
 </header>
 
-<!-- About -->
-<section id="about">
-    <h2>About Healthy Food</h2>
-
-    <p>
-        Healthy food provides essential nutrients
-        needed for the growth and proper functioning
-        of our body. A balanced diet includes fruits,
-        vegetables, whole grains, proteins and
-        healthy fats. Eating a variety of foods
-        supports overall health and well-being.
-    </p>
-</section>
-
-<!-- Healthy Foods -->
-<section id="foods">
-    <h2>Healthy Food Categories</h2>
+<!-- Food Categories -->
+<section id="categories">
+    <h2>Food Categories</h2>
 
     <div class="container">
 
         <div class="card">
             <div class="emoji">🍎</div>
             <h3>Fruits</h3>
-            <p>
-                Apples, bananas, oranges and berries
-                provide vitamins and fibre.
-            </p>
+            <p>Apples, bananas, oranges and grapes.</p>
         </div>
 
         <div class="card">
             <div class="emoji">🥦</div>
             <h3>Vegetables</h3>
-            <p>
-                Spinach, carrots and broccoli
-                provide important nutrients.
-            </p>
+            <p>Carrots, spinach, broccoli and tomatoes.</p>
         </div>
 
         <div class="card">
             <div class="emoji">🌾</div>
             <h3>Whole Grains</h3>
-            <p>
-                Oats, brown rice and whole wheat
-                provide energy and fibre.
-            </p>
+            <p>Rice, oats, wheat and millets.</p>
         </div>
 
         <div class="card">
             <div class="emoji">🥜</div>
             <h3>Protein Foods</h3>
-            <p>
-                Beans, lentils, eggs and nuts
-                provide protein for the body.
-            </p>
+            <p>Dal, beans, eggs and nuts.</p>
         </div>
 
     </div>
@@ -259,109 +235,117 @@
 
 <!-- Recipes -->
 <section id="recipes">
-    <h2>Healthy Recipes</h2>
+    <h2>Nutritious Recipes</h2>
 
     <div class="container">
 
         <div class="card">
             <div class="emoji">🥗</div>
             <h3>Vegetable Salad</h3>
-            <p>
-                A refreshing combination of fresh
-                vegetables and lemon dressing.
-            </p>
+            <p>Calories: Approximately 150 kcal</p>
+
+            <button onclick="showRecipe('salad')">
+                View Ingredients
+            </button>
+
+            <div class="ingredients" id="salad">
+                <b>Ingredients:</b>
+                <p>Cucumber, tomato, carrot,
+                   lemon juice and pepper.</p>
+            </div>
         </div>
 
         <div class="card">
             <div class="emoji">🥣</div>
-            <h3>Oats Breakfast</h3>
-            <p>
-                Oats prepared with milk, fruits
-                and nuts.
-            </p>
+            <h3>Healthy Oats</h3>
+            <p>Calories: Approximately 250 kcal</p>
+
+            <button onclick="showRecipe('oats')">
+                View Ingredients
+            </button>
+
+            <div class="ingredients" id="oats">
+                <b>Ingredients:</b>
+                <p>Oats, milk, banana and almonds.</p>
+            </div>
         </div>
 
         <div class="card">
             <div class="emoji">🍲</div>
             <h3>Vegetable Soup</h3>
-            <p>
-                A warm soup prepared with
-                nutritious vegetables.
-            </p>
+            <p>Calories: Approximately 120 kcal</p>
+
+            <button onclick="showRecipe('soup')">
+                View Ingredients
+            </button>
+
+            <div class="ingredients" id="soup">
+                <b>Ingredients:</b>
+                <p>Carrot, beans, tomato, water
+                   and black pepper.</p>
+            </div>
         </div>
 
     </div>
 </section>
 
-<!-- Meal Plan -->
+<!-- Meal Plans -->
 <section id="meal">
-    <h2>Daily Balanced Meal Ideas</h2>
+    <h2>Daily Meal Plans</h2>
 
     <div class="container">
 
         <div class="card">
-            <h3>🌅 Breakfast</h3>
-            <p>
-                Idli, dosa, oats or whole-grain
-                breakfast with fruit.
-            </p>
+            <div class="emoji">🌅</div>
+            <h3>Breakfast</h3>
+            <p>Idli, sambar and seasonal fruit.</p>
         </div>
 
         <div class="card">
-            <h3>☀ Lunch</h3>
-            <p>
-                Rice or roti, dal, vegetables,
-                curd and salad.
-            </p>
+            <div class="emoji">☀️</div>
+            <h3>Lunch</h3>
+            <p>Rice, dal, vegetables and curd.</p>
         </div>
 
         <div class="card">
-            <h3>🌇 Evening Snack</h3>
-            <p>
-                Seasonal fruits, roasted chana
-                or a handful of nuts.
-            </p>
+            <div class="emoji">🍌</div>
+            <h3>Evening Snack</h3>
+            <p>Fruit or roasted chana.</p>
         </div>
 
         <div class="card">
-            <h3>🌙 Dinner</h3>
-            <p>
-                Roti or rice with vegetables
-                and a protein-rich food.
-            </p>
+            <div class="emoji">🌙</div>
+            <h3>Dinner</h3>
+            <p>Roti, vegetable curry and dal.</p>
         </div>
 
     </div>
 </section>
 
-<!-- Nutrition Tips -->
+<!-- Healthy Tips -->
 <section id="tips">
-    <h2>Nutrition Tips</h2>
+    <h2>Healthy Eating Tips</h2>
 
     <div class="container">
 
         <div class="card">
-            <div class="emoji">💧</div>
-            <h3>Stay Hydrated</h3>
-            <p>Drink water regularly throughout the day.</p>
+            <h3>Drink Water</h3>
+            <p>Drink water regularly.</p>
         </div>
 
         <div class="card">
-            <div class="emoji">🥬</div>
-            <h3>Eat Variety</h3>
-            <p>Include different fruits and vegetables.</p>
+            <h3>Eat Fruits</h3>
+            <p>Include seasonal fruits in meals.</p>
         </div>
 
         <div class="card">
-            <div class="emoji">🍽️</div>
-            <h3>Balanced Meals</h3>
-            <p>Include different food groups in your meals.</p>
+            <h3>Balanced Diet</h3>
+            <p>Include different food groups.</p>
         </div>
 
         <div class="card">
-            <div class="emoji">🏃</div>
             <h3>Stay Active</h3>
-            <p>Include regular physical activity in your routine.</p>
+            <p>Include regular physical activity.</p>
         </div>
 
     </div>
@@ -370,23 +354,32 @@
 <!-- Contact -->
 <section id="contact">
     <h2>Contact Us</h2>
-
     <p>Email: healthylife@example.com</p>
     <p>Phone: +91 9876543210</p>
-    <p>Address: Andhra Pradesh, India</p>
+    <p>Location: Andhra Pradesh, India</p>
 </section>
 
-<!-- Footer -->
 <footer>
     <p>© 2026 Healthy Life. All Rights Reserved.</p>
 </footer>
 
+<!-- JavaScript -->
 <script>
-    // Welcome message
-    window.onload = function() {
-        console.log("Welcome to Healthy Life Website!");
-    };
+    function showRecipe(id) {
+
+        let recipe =
+            document.getElementById(id);
+
+        if (recipe.style.display === "block") {
+            recipe.style.display = "none";
+        } else {
+            recipe.style.display = "block";
+        }
+    }
+
+    console.log("Healthy Food Website Loaded");
 </script>
 
 </body>
 </html>
+
